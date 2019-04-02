@@ -1,0 +1,136 @@
+/*
+Display content on the faces of a rotating cube
+*/
+
+* {
+  box-sizing: border-box;
+  transition: 2.5s;
+  text-decoration: none;
+}
+
+html, body {
+  height:100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  --cube-dim: 32vmax;
+  /*--half-cube-dim: calc(--cube-dim*0.5);
+  --minus-half-cube-dim: calc(--cube-dim*-0.5);*/
+  --half-cube-dim: 16vmax;
+  --minus-half-cube-dim: -16vmax;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  /*perspective: 4000px;
+  perspective-origin: center center;*/
+  backface-visibility: hidden;
+  position: absolute;
+  top: calc(50% - var(--half-cube-dim));
+  left: calc(50% - var(--half-cube-dim));
+  transform-origin: center center;
+  font-size: 8vmin;
+}
+
+.face {
+  position: absolute;
+  width: var(--cube-dim);
+  height: var(--cube-dim);
+  border-radius: 3%;
+  background-color: black;
+  opacity: 1.0;
+  box-shadow: 0 0 0 2px;
+  /*margin: var(--half-cube-dim);*/
+}
+
+button {
+    position: absolute;
+    width: 10vw;
+    height: 5vh;
+    font-size: 2vw;
+    color: #ffbb00;
+    background-color: #2020ff;
+    border-radius: 5px;
+}
+
+#btnR {
+    bottom: 5vh;
+    right: 5vh;
+}
+
+#btnL {
+    bottom: 5vh;
+    right: 30vh;
+}
+
+#btnU {
+    bottom: 5vh;
+    right: 55vh;
+}
+
+#btnD {
+    bottom: 5vh;
+    right: 80vh;
+}
+
+.rotateR {
+  transition: 3s;
+  transform: rotateY(90deg);
+}
+.rotateL {
+  transition: 3s;
+  transform: rotateY(-90deg);
+}
+
+.rotateU {
+  transition: 3s;
+  transform: rotateX(90deg);
+}
+.rotateD {
+  transition: 3s;
+  transform: rotateX(-90deg);
+}
+
+.card, .card-image, .card-content {
+    border-radius: 3%;
+}
+
+.card {
+    height: 100%;
+    padding: 1vw;
+}
+
+.card-image {
+  margin: 1vw;
+  border: 3px solid black;
+}
+
+/*=================================================*/
+
+#front {
+  transform: rotate3d(0, 1, 0, 0deg) translateZ(var(--half-cube-dim));
+}
+
+#top {
+  transform: rotate3d(0, 1, 0, 90deg) translateZ(var(--half-cube-dim));
+}
+
+#back {
+  transform: rotate3d(0, 1, 0, 180deg) translateZ(var(--half-cube-dim));
+}
+
+#bottom {
+  transform: rotate3d(0, 1, 0, 270deg) translateZ(var(--half-cube-dim));
+}
+
+#left {
+  transform: rotate3d(1, 0, 0, 90deg) translateZ(var(--half-cube-dim));
+}
+
+#right {
+  transform: rotate3d(1, 0, 0, -90deg) translateZ(var(--half-cube-dim));
+}
+
+.material-icons {
+  font-size: 4vmin;
+}

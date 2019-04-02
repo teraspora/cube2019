@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="3d Cube, 2019 version">
+    <meta name="author" content="John Lynch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>
+      3d Cube
+    </title>
+</head>
+
+<body>
+
+  <main class="main">
+    <section class="container">
+      <div class="cube" id="cube0">
+        <div class="face" id="front">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="imgs/img00.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="http://www.teraspora.net">Visit website</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Yo, well hello there!   I bet you didn't expect this!.</p>
+            </div>
+          </div>
+        </div>
+        <div class="face" id="left">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="imgs/img01.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="http://www.teraspora.net">Visit website</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Yo, well hello there!   I bet you didn't expect this!.</p>
+            </div>
+          </div>
+        </div>
+        <div class="face" id="back">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="imgs/img02.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="http://www.teraspora.net">Visit website</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Yo, well hello there!   I bet you didn't expect this!.</p>
+            </div>
+          </div>                                       
+        </div>
+        <div class="face" id="right">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="imgs/img03.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="http://www.teraspora.net">Visit website</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Yo, well hello there!   I bet you didn't expect this!.</p>
+            </div>
+          </div>
+        </div>
+        <div class="face" id="top">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="imgs/img04.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="http://www.teraspora.net">Visit website</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Yo, well hello there!   I bet you didn't expect this!.</p>
+            </div>
+          </div>
+        </div>
+        <div class="face" id="bottom">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="imgs/img05.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="http://www.teraspora.net">Visit website</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Yo, well hello there!   I bet you didn't expect this!.</p>
+            </div>
+          </div>                  
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <button id="btnR" onclick="rotRL(true)"><i class="material-icons">arrow_right</i></button>
+      <button id="btnL" onclick="rotRL(false)"><i class="material-icons">arrow_left</i></button>
+      <button id="btnU" onclick="rotUD(true)"><i class="material-icons">arrow_drop_up</i></button>
+      <button id="btnD" onclick="rotUD(false)"><i class="material-icons">arrow_drop_down</i></button>
+    </section>
+        
+  </main>
+  <!-- <script>
+    function rot90(pos) {
+      document.getElementById("cube0").classList.add(`rotate${pos ? '' : '-neg'}`);
+    }
+  </script> -->
+  <script>
+    function rotRL(pos) {
+      document.getElementById('cube0').classList.toggle(`rotate${pos ? 'R' : 'L'}`);
+    }
+    function rotUD(pos) {
+      document.getElementById('cube0').classList.toggle(`rotate${pos ? 'U' : 'D'}`);
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript" src="scripts/index.js"></script>
+  
+</body>
+
+</html>
