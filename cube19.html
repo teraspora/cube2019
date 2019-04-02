@@ -23,7 +23,7 @@
 
   <main class="main">
     <section class="container">
-      <div class="cube" id="cube0">
+      <div id="cube">
         <div class="face" id="front">
           <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
@@ -31,7 +31,7 @@
             </div>
             <div class="card-content">
               <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="http://www.teraspora.net">Visit website</a></p>
+              <p><a href="http://www.teraspora.net">0. Visit website</a></p>
             </div>
             <div class="card-reveal">
               <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
@@ -46,7 +46,7 @@
             </div>
             <div class="card-content">
               <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="http://www.teraspora.net">Visit website</a></p>
+              <p><a href="http://www.teraspora.net">4. Visit website</a></p>
             </div>
             <div class="card-reveal">
               <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
@@ -61,7 +61,7 @@
             </div>
             <div class="card-content">
               <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="http://www.teraspora.net">Visit website</a></p>
+              <p><a href="http://www.teraspora.net">5. Visit website</a></p>
             </div>
             <div class="card-reveal">
               <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
@@ -76,7 +76,7 @@
             </div>
             <div class="card-content">
               <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="http://www.teraspora.net">Visit website</a></p>
+              <p><a href="http://www.teraspora.net">3. Visit website</a></p>
             </div>
             <div class="card-reveal">
               <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
@@ -91,7 +91,7 @@
             </div>
             <div class="card-content">
               <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="http://www.teraspora.net">Visit website</a></p>
+              <p><a href="http://www.teraspora.net">2. Visit website</a></p>
             </div>
             <div class="card-reveal">
               <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
@@ -106,7 +106,7 @@
             </div>
             <div class="card-content">
               <span class="card-title activator blue yellow-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="http://www.teraspora.net">Visit website</a></p>
+              <p><a href="http://www.teraspora.net">1. Visit website</a></p>
             </div>
             <div class="card-reveal">
               <span class="card-title yellow-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
@@ -117,25 +117,24 @@
       </div>
     </section>
 
-    <section>
-      <button id="btnR" onclick="rotRL(true)"><i class="material-icons">arrow_right</i></button>
-      <button id="btnL" onclick="rotRL(false)"><i class="material-icons">arrow_left</i></button>
-      <button id="btnU" onclick="rotUD(true)"><i class="material-icons">arrow_drop_up</i></button>
-      <button id="btnD" onclick="rotUD(false)"><i class="material-icons">arrow_drop_down</i></button>
+    <section class="row">
+      <button class="btn-floating btn-large waves-effect waves-light red" id="btn-face0" onclick="rot(0)"><i class="material-icons">filter_none</i></button>
+      <button class="btn-floating btn-large waves-effect waves-light red" id="btn-face1" onclick="rot(1)"><i class="material-icons">filter_1</i></button>
+      <button class="btn-floating btn-large waves-effect waves-light red" id="btn-face2" onclick="rot(2)"><i class="material-icons">filter_2</i></button>
+      <button class="btn-floating btn-large waves-effect waves-light red" id="btn-face3" onclick="rot(3)"><i class="material-icons">filter_3</i></button>
+      <button class="btn-floating btn-large waves-effect waves-light red" id="btn-face4" onclick="rot(4)"><i class="material-icons">filter_4</i></button>
+      <button class="btn-floating btn-large waves-effect waves-light red" id="btn-face5" onclick="rot(5)"><i class="material-icons">filter_5</i></button>
     </section>
         
   </main>
   <!-- <script>
     function rot90(pos) {
-      document.getElementById("cube0").classList.add(`rotate${pos ? '' : '-neg'}`);
+      document.getElementById("cube").classList.add(`rotate${pos ? '' : '-neg'}`);
     }
   </script> -->
   <script>
-    function rotRL(pos) {
-      document.getElementById('cube0').classList.toggle(`rotate${pos ? 'R' : 'L'}`);
-    }
-    function rotUD(pos) {
-      document.getElementById('cube0').classList.toggle(`rotate${pos ? 'U' : 'D'}`);
+    function rot(face) {
+      document.getElementById('cube').classList = `rotate${face}`;
     }
   </script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

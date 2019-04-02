@@ -13,14 +13,12 @@ html, body {
   width: 100%;
   overflow: hidden;
   background-color: black;
-  --cube-dim: 32vmax;
-  /*--half-cube-dim: calc(--cube-dim*0.5);
-  --minus-half-cube-dim: calc(--cube-dim*-0.5);*/
-  --half-cube-dim: 16vmax;
-  --minus-half-cube-dim: -16vmax;
+  --cube-dim: 40vmax;
+  --half-cube-dim: calc(var(--cube-dim)*0.5);
+  --minus-half-cube-dim: calc(var(--cube-dim)*-0.5);
 }
 
-.cube {
+#cube {
   transform-style: preserve-3d;
   /*perspective: 4000px;
   perspective-origin: center center;*/
@@ -53,7 +51,7 @@ button {
     border-radius: 5px;
 }
 
-#btnR {
+/*#btnR {
     bottom: 5vh;
     right: 5vh;
 }
@@ -71,24 +69,42 @@ button {
 #btnD {
     bottom: 5vh;
     right: 80vh;
+}*/
+
+.rotate0 {
+  transition-timing-function: ease-out;
+  transition: 0.8s;
+  transform: translateX(0) translateY(0) rotateX(360deg) rotateY(360deg);
 }
 
-.rotateR {
-  transition: 3s;
-  transform: rotateY(90deg);
-}
-.rotateL {
-  transition: 3s;
-  transform: rotateY(-90deg);
+.rotate1 {
+  transition-timing-function: ease-out;
+  transition: 0.8s;
+  transform: translateY(0) translateX(var(--half-cube-dim)) rotateY(-270deg);
 }
 
-.rotateU {
-  transition: 3s;
-  transform: rotateX(90deg);
+.rotate2 {
+  transition-timing-function: ease-out;
+  transition: 0.8s;
+  transform: translateY(0) translateX(var(--half-cube-dim)) rotateY(270deg);
 }
-.rotateD {
-  transition: 3s;
-  transform: rotateX(-90deg);
+
+.rotate3 {
+  transition-timing-function: ease-out;
+  transition: 0.8s;
+  transform: translateX(0) translateY(var(--half-cube-dim)) rotateX(-270deg);
+}
+
+.rotate4 {
+  transition-timing-function: ease-out;
+  transition: 0.8s;
+  transform: translateX(0) translateY(var(--half-cube-dim)) rotateX(270deg);
+}
+
+.rotate5 {
+  transition-timing-function: ease-out;
+  transition: 0.8s;
+  transform: translateY(0) translateX(var(--cube-dim)) rotateY(540deg);
 }
 
 .card, .card-image, .card-content {
